@@ -1,6 +1,7 @@
 {
   "name": "miapp2.0",
   "version": "1.0.0",
+  "homepage": "http://nkarlezib.github.io/tmywebsite",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -11,7 +12,10 @@
     "build-assets": "yarn run clean-assets && NODE_ENV=production webpack -p",
     "clean-assets": "rm -rf build/assets",
     "heroku-postbuild": "yarn run build-assets && sequelize db:migrate",
-    "test": "jest"
+    "test": "jest",
+    "predeploy": "yarn run src",
+    "deploy": "gh-pages -d src",
+    "build": "react-scripts src"
   },
   "dependencies": {
     "ejs-mate": "^3.0.0",

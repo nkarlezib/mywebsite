@@ -1,4 +1,5 @@
 const express = require('express');
+const react = require('react');
 const app = express();
 const engine = require('ejs-mate');
 const path = require('path');
